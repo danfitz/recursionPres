@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Recursion - Dan Fitz</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1 style="color: lime;">Recursion</h1>
+					<p>How it Works and When It's Useful</p>
+				</section>
+				<section>
+					<section>
+						<h2>Explanation 1</h2>
+						<p>They're Kind of Like Loops</p>
+						<pre><code class="hljs" data-trim data-line-numbers="">
+							/* ===== LOOP ===== */
+							while (true) {
+							  console.log("I'm a loop!!!");
+							}
+
+							/* ===== RECURSION ===== */
+							function run() {
+							  console.log("I'm a recursive function!!!")
+							  run();
+							}
+
+							run(); /* function call */
+						</code></pre>
+						<p class="fragment">We need a <strong>stop condition</strong></p>
+					</section>
+					<section data-background-iframe="https://codepen.io/danfitz/pen/JjPbeqj?editors=0012" data-background-interactive>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Explanation 2</h2>
+						<p>They're Kind of Like Function Call Arguments</p>
+						<pre><code class="hljs" data-trim data-line-numbers="">
+							/* ===== FUNCTION CALL ARGUMENTS ===== */
+							function add(a, b) { return a + b; }
+							
+							add(1, add(1, 1));
+							/* becomes add(1, 2) */
+							/* then becomes 3 */
+						</code></pre>
+						<img src="images/call-stack.png" style="width: 60%;">
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim data-line-numbers="">
+							/* ===== RECURSION ===== */
+							function recursion() {
+							  if (3RD RECURSIVE CALL) {
+							    /* STOP! */
+							  } else {
+							    recursion();
+							  }
+							}
+							
+							recursion(); /* recursive function call */
+						</code></pre>
+						<img src="images/recursion-call-stack.png">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Why use recursion?</h2>
+							<h3 class="fragment" style="color: red;">Reasons not to:</h3>
+							<ul>
+								<li class="fragment">Loops seem more straightforward</li>
+								<li class="fragment">All recursive solutions have a loop equivalent</li>
+							</ul>
+							<br><br><br>
+							<h3 class="fragment" style="color: skyblue;">Answer: Code Comprehension</h3>
+							<h3 class="fragment" style="color: lime;">Example: Trees</h3>
+					</section>
+					<section data-background-iframe="https://codepen.io/danfitz/pen/oNvLVYj?editors=0012" data-background-interactive>
+					</section>
+				</section>
+				<section>
+					<h1 class="fragment grow">The <span style="color: skyblue;">DOM</span> is a <span style="color: lime;">TREE</span></h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
