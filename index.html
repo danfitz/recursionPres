@@ -27,6 +27,14 @@
 			<div class="slides">
 				<section>
 					<h1 class="fragment" style="color: lime;">Recursion</h1>
+						<pre class="fragment"><code class="hljs" data-trim data-line-numbers="2-4">
+							/* ===== RECURSION ===== */
+							function recursion() {
+								recursion();
+							}
+
+							recursion(); /* function call */
+						</code></pre>
 					<ul>
 						<li class="fragment">2 Explanations</li>
 						<li class="fragment">When It's Useful</li>
@@ -43,14 +51,14 @@
 							}
 
 							/* ===== RECURSION ===== */
-							function run() {
+							function recursion() {
 							  console.log("I'm a recursive function!!!")
-							  run();
+							  recursion();
 							}
 
-							run(); /* function call */
+							recursion(); /* function call */
 						</code></pre>
-						<p class="fragment">We need a <strong>stop condition</strong></p>
+						<p class="fragment">We need a <strong>STOP CONDITION</strong></p>
 					</section>
 					<section data-background-iframe="https://codepen.io/danfitz/pen/JjPbeqj?editors=0012" data-background-interactive>
 					</section>
@@ -59,7 +67,7 @@
 					<section>
 						<h2>Explanation 2</h2>
 						<p>They're Kind of Like Function Call Arguments</p>
-						<pre><code class="hljs" data-trim data-line-numbers="">
+						<pre><code class="hljs" data-trim data-line-numbers="4-6">
 							/* ===== FUNCTION CALL ARGUMENTS ===== */
 							function add(a, b) { return a + b; }
 							
@@ -90,8 +98,8 @@
 						<h2>Why use recursion?</h2>
 							<h3 class="fragment" style="color: red;">Reasons not to:</h3>
 							<ul>
-								<li class="fragment">Loops seem more straightforward</li>
 								<li class="fragment">All recursive solutions have a loop equivalent</li>
+								<li class="fragment">Loops seem more straightforward</li>
 							</ul>
 							<br><br><br>
 							<h3 class="fragment" style="color: skyblue;">Answer: Code Comprehension</h3>
@@ -101,7 +109,8 @@
 					</section>
 				</section>
 				<section>
-					<h1 class="fragment grow">The <span style="color: skyblue;">DOM</span> is a <span style="color: lime;">TREE</span></h1>
+					<h1 class="fragment">The <span style="color: skyblue;">DOM</span> is a <span style="color: lime;">TREE</span></h1>
+					<h1 class="fragment" style="color: orangered; text-decoration: underline; text-transform: lowercase;">bit.ly/hyrecursion</h1>
 				</section>
 			</div>
 		</div>
