@@ -1,7 +1,7 @@
 # Recursion Resources
 
 ## CodePens in presentation
-* [CodePen for loop ad recursion comparison (and stop condition)](https://codepen.io/danfitz/pen/JjPbeqj?editors=0012)
+* [CodePen comparing a loop and recursive function (includes stop condition)](https://codepen.io/danfitz/pen/JjPbeqj?editors=0012)
 * [CodePen for recursion with trees](https://codepen.io/danfitz/pen/oNvLVYj?editors=0012)
 
 ## What is recursion?
